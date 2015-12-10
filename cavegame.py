@@ -1,20 +1,18 @@
-import time
 import random
+import time
 
 # game function
-def game():
+def cavegame():
 
-print ("*****************")
-print ("Cave of the Void!")
-print ("*****************")
+print ("THE KNIGHT IN THE NIGHT")
 
 time.sleep(3)
 
-print ("You enter a dark cavern out of curiosity. All that is around you is a feeling of nothingness. You try and reach for a wall, but something touches you. You scream and turn around, its only a small stick.")
-ch1 = str(input("Do you take it? yes or no? "))
+print ("You enter a dark cavern. All that is around you is a feeling of nothingness. You try and reach for a wall, but something touches you. You scream and turn around, its only a small stick.")
+asw1 = str(input("Do you take it? yes or no? "))
 
 # STICK TAKEN
-if ch1 in ['Yes', 'YES', 'yes']:
+if asw1 in ['Yes', 'YES', 'yes']:
     print("You have pulled the stick out of the wall.")
     time.sleep(2)
     stick = 1
@@ -25,41 +23,41 @@ else:
     stick = 0
 
 print ("As you wander in the darkness you see a faint glow off in the distance.")
-ch2 = str(input("Do you approach the glow? yes or no?"))
+asw2 = str(input("Do you approach the glow? yes or no?"))
 
-# APPROACH THE GLOW
-if ch2 in ['Yes', 'YES', 'yes']:
-    print ("You went towards the light...")
-    time.sleep(2)
-    print ("As you draw closer, the source starts to become clear to you.")
+# APPROACH 
+if asw2 in ['Yes', 'YES', 'yes']:
+    print ("You went towards the glow")
     time.sleep(1)
+    print ("As you draw closer, the source starts to become clear to you.")
+    time.sleep(2)
     print ("The glow is coming from the torch held by a guardian knight of a vast treasure!")
-    ch3 = str(input("The urge of fight or flight comes to you. Do you fight for your life and the gold? yes or no?"))
+    asw3 = str(input("The urge of fight or flight comes to you. Do you fight for your life and the gold? yes or no?"))
 
     # FIGHT THE KNIGHT
-    if ch3 in ['Yes', 'YES', 'yes']:
+    if asw3 in ['Yes', 'YES', 'yes']:
 
         # WITH STICK
         if stick == 1:
             print ("You only have a stick to fight with! The knight has a long sword. This doesn't look good.")
-            print ("You quickly jab the knight in it's eye and gain an advantage")
+            print ("You quickly POKE the knight in it's eye")
             time.sleep(2)
-            print ("           Fighting for your Life                     ")
-            print ("   YOU MUST HIT ABOVE A 5 TO KILL THE Knight    ")
-            print ("IF THE Knight HITS HIGHER THAN YOU, YOU WILL DIE")
+            print ("Fighting for your Life")
+            print ("You have to roll above a 5 ")
+            print ("If the Knight rolls higher than you, you will lose.")
             time.sleep(2)
-            fdmg1 = int(random.randint(3, 10))
-            edmg1 = int(random.randint(1, 5))
-            print ("you hit a", fdmg1)
-            print ("the Knight hits a", edmg1)
+            urdmg1 = int(random.randint(3, 10))
+            enemydmg1 = int(random.randint(1, 5))
+            print ("you rolled a", urdmg1)
+            print ("the Knight rolls a", enemydmg1)
             time.sleep(2)
 
-            if edmg1 > fdmg1:
+            if enemydmg1 > urdmg1:
                 print ("The Knight has dealt more damage than you! The Knight leaves you bleeding on the floor.")
                 complete = 0
                 return complete
 
-            elif fdmg1 < 5:
+            elif urdmg1 < 5:
                 print ("You didn't do enough damage to kill the Knight, what a shock, but you manage to escape from the Knight's impaired vision.")
                 complete = 1
                 return complete
@@ -71,24 +69,24 @@ if ch2 in ['Yes', 'YES', 'yes']:
 
         # WITHOUT STICK
         else:
-            print ("You don't have anything to fight with!")
+            print ("You have your bare hands to fight a knight with.")
             time.sleep(2)
-            print ("              Fighting for your Life               ")
-            print ("   YOU MUST HIT ABOVE A 5 TO KILL THE Knight    ")
-            print ("IF THE Knight HITS HIGHER THAN YOU, YOU WILL DIE")
+            print ("Fighting for your Life")
+            print ("  Yuo have to roll above a 5 ")
+            print ("IF THE Knight rolls higher than you, you will lose.")
             time.sleep(2)
-            fdmg1 = int(random.randint(1, 7))
-            edmg1 = int(random.randint(1, 5))
-            print ("you hit a", fdmg1)
-            print ("the Knight hits a", edmg1)
+            urdmg1 = int(random.randint(1, 7))
+            enemydmg1 = int(random.randint(1, 5))
+            print ("you rolled a", urdmg1)
+            print ("the Knight rolls a", enemydmg1)
             time.sleep(2)
 
-            if edmg1 > fdmg1:
+            if enemydmg1 > urdmg1:
                 print ("The Knight has run you through with his sword. Damaging you for more!")
                 complete = 0
                 return complete
 
-            elif fdmg1 < 5:
+            elif urdmg1 < 5:
                 print ("You didn't do enough damage to kill the Knight, but you are quicker than he is and manage to escape")
                 complete = 1
                 return complete
@@ -109,7 +107,7 @@ if ch2 in ['Yes', 'YES', 'yes']:
 else:
         print ("You turn away from the glowing object, and attempt to leave the cave...")
         time.sleep(1)
-        print ("But something won't let you, the glow calls to you.")
+        print ("But something won't let you, the glow calls to you. It wont let you leave.")
         time.sleep(2)
         complete = 0
         return complete
