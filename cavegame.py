@@ -11,13 +11,13 @@ time.sleep(3)
 print ("You enter a dark cavern. All that is around you is a feeling of nothingness. You try and reach for a wall, but something touches you. You scream and turn around, its only a small stick.")
 asw1 = str(input("Do you take it? yes or no? "))
 
-# STICK TAKEN
+# taken
 if asw1 in ['Yes', 'YES', 'yes']:
     print("You have pulled the stick out of the wall.")
     time.sleep(2)
     stick = 1
 
-# STICK NOT TAKEN
+#not taken
 else:
     print("You have left the stick in the wall for some reason.")
     stick = 0
@@ -25,7 +25,7 @@ else:
 print ("As you wander in the darkness you see a faint glow off in the distance.")
 asw2 = str(input("Do you approach the glow? yes or no?"))
 
-# APPROACH 
+# go twards 
 if asw2 in ['Yes', 'YES', 'yes']:
     print ("You went towards the glow")
     time.sleep(1)
@@ -118,7 +118,7 @@ while alive:
 
 complete = game()
 if complete == 1:
-    alive = input('You managed to escape the cave alive! Would you like to play again? yes or no? ')
+    alive = input('You got out with your life! Want to go again? yes or no? ')
     if alive in ['YES', 'yes', 'Yes',]:
         alive
 
